@@ -1,0 +1,25 @@
+:root {
+    color-scheme: light dark;
+    --special-text-color: hsla(60, 100%, 50%, 0.5);
+    --border-color: black;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --special-text-color: hsla(60, 50%, 70%, 0.75);
+        --border-color: white;
+    }
+}
+
+.special {
+    color: var(--special-text-color);
+    border: 1px solid var(--border-color);
+}
+
+body {
+    -webkit-text-size-adjust: 100%;
+        -ms-text-size-adjust: none;
+}
+
+@media (prefers-color-scheme: dark) { a:link { color: white } }
+@media (prefers-color-scheme: light) { a:link { color: blue } }
